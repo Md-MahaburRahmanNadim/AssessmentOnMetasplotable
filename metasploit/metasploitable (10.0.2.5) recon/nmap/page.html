@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>nmap</title>
+</head><body>nmap -T4 -p- -A 10.0,2.5<br/>
+<br/>
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-04-27 01:06 EDT<br/>
+Nmap scan report for 10.0.2.5<br/>
+Host is up (0.00040s latency).<br/>
+Not shown: 65505 closed ports<br/>
+PORT &nbsp; &nbsp; &nbsp;STATE SERVICE &nbsp; &nbsp; VERSION<br/>
+21/tcp &nbsp; &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; vsftpd 2.3.4<br/>
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)<br/>
+| ftp-syst: <br/>
+| &nbsp; STAT: <br/>
+| FTP server status:<br/>
+| &nbsp; &nbsp; &nbsp;Connected to 10.0.2.15<br/>
+| &nbsp; &nbsp; &nbsp;Logged in as ftp<br/>
+| &nbsp; &nbsp; &nbsp;TYPE: ASCII<br/>
+| &nbsp; &nbsp; &nbsp;No session bandwidth limit<br/>
+| &nbsp; &nbsp; &nbsp;Session timeout in seconds is 300<br/>
+| &nbsp; &nbsp; &nbsp;Control connection is plain text<br/>
+| &nbsp; &nbsp; &nbsp;Data connections will be plain text<br/>
+| &nbsp; &nbsp; &nbsp;vsFTPd 2.3.4 - secure, fast, stable<br/>
+|_End of status<br/>
+22/tcp &nbsp; &nbsp;open &nbsp;ssh &nbsp; &nbsp; &nbsp; &nbsp; OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)<br/>
+| ssh-hostkey: <br/>
+| &nbsp; 1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)<br/>
+|_ &nbsp;2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)<br/>
+23/tcp &nbsp; &nbsp;open &nbsp;telnet &nbsp; &nbsp; &nbsp;Linux telnetd<br/>
+25/tcp &nbsp; &nbsp;open &nbsp;smtp &nbsp; &nbsp; &nbsp; &nbsp;Postfix smtpd<br/>
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, <br/>
+|_ssl-date: 2021-04-27T05:08:51+00:00; 0s from scanner time.<br/>
+| sslv2: <br/>
+| &nbsp; SSLv2 supported<br/>
+| &nbsp; ciphers: <br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_EXPORT40_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC4_128_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_DES_192_EDE3_CBC_WITH_MD5<br/>
+| &nbsp; &nbsp; SSL2_RC2_128_CBC_WITH_MD5<br/>
+|_ &nbsp; &nbsp;SSL2_DES_64_CBC_WITH_MD5<br/>
+53/tcp &nbsp; &nbsp;open &nbsp;domain &nbsp; &nbsp; &nbsp;ISC BIND 9.4.2<br/>
+| dns-nsid: <br/>
+|_ &nbsp;bind.version: 9.4.2<br/>
+80/tcp &nbsp; &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache httpd 2.2.8 ((Ubuntu) DAV/2)<br/>
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2<br/>
+|_http-title: Metasploitable2 - Linux<br/>
+111/tcp &nbsp; open &nbsp;rpcbind &nbsp; &nbsp; 2 (RPC #100000)<br/>
+139/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)<br/>
+445/tcp &nbsp; open &nbsp;netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)<br/>
+512/tcp &nbsp; open &nbsp;exec &nbsp; &nbsp; &nbsp; &nbsp;netkit-rsh rexecd<br/>
+513/tcp &nbsp; open &nbsp;login?<br/>
+514/tcp &nbsp; open &nbsp;tcpwrapped<br/>
+1099/tcp &nbsp;open &nbsp;java-rmi &nbsp; &nbsp;GNU Classpath grmiregistry<br/>
+1524/tcp &nbsp;open &nbsp;bindshell &nbsp; Metasploitable root shell<br/>
+2049/tcp &nbsp;open &nbsp;nfs &nbsp; &nbsp; &nbsp; &nbsp; 2-4 (RPC #100003)<br/>
+2121/tcp &nbsp;open &nbsp;ftp &nbsp; &nbsp; &nbsp; &nbsp; ProFTPD 1.3.1<br/>
+3306/tcp &nbsp;open &nbsp;mysql &nbsp; &nbsp; &nbsp; MySQL 5.0.51a-3ubuntu5<br/>
+| mysql-info: <br/>
+| &nbsp; Protocol: 10<br/>
+| &nbsp; Version: 5.0.51a-3ubuntu5<br/>
+| &nbsp; Thread ID: 10<br/>
+| &nbsp; Capabilities flags: 43564<br/>
+| &nbsp; Some Capabilities: Support41Auth, LongColumnFlag, SupportsTransactions, SupportsCompression, Speaks41ProtocolNew, ConnectWithDatabase, SwitchToSSLAfterHandshake<br/>
+| &nbsp; Status: Autocommit<br/>
+|_ &nbsp;Salt: hs*s&amp;b=H1[Z1$],b*FeH<br/>
+3632/tcp &nbsp;open &nbsp;distccd &nbsp; &nbsp; distccd v1 ((GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4))<br/>
+5432/tcp &nbsp;open &nbsp;postgresql &nbsp;PostgreSQL DB 8.3.0 - 8.3.7<br/>
+|_ssl-date: 2021-04-27T05:08:51+00:00; 0s from scanner time.<br/>
+5900/tcp &nbsp;open &nbsp;vnc &nbsp; &nbsp; &nbsp; &nbsp; VNC (protocol 3.3)<br/>
+| vnc-info: <br/>
+| &nbsp; Protocol version: 3.3<br/>
+| &nbsp; Security types: <br/>
+|_ &nbsp; &nbsp;VNC Authentication (2)<br/>
+6000/tcp &nbsp;open &nbsp;X11 &nbsp; &nbsp; &nbsp; &nbsp; (access denied)<br/>
+6667/tcp &nbsp;open &nbsp;irc &nbsp; &nbsp; &nbsp; &nbsp; UnrealIRCd<br/>
+6697/tcp &nbsp;open &nbsp;irc &nbsp; &nbsp; &nbsp; &nbsp; UnrealIRCd<br/>
+| irc-info: <br/>
+| &nbsp; users: 2<br/>
+| &nbsp; servers: 1<br/>
+| &nbsp; lusers: 2<br/>
+| &nbsp; lservers: 0<br/>
+| &nbsp; server: irc.Metasploitable.LAN<br/>
+| &nbsp; version: Unreal3.2.8.1. irc.Metasploitable.LAN <br/>
+| &nbsp; uptime: 0 days, 1:12:34<br/>
+| &nbsp; source ident: nmap<br/>
+| &nbsp; source host: C29CBC04.EB72D3BE.7B559A54.IP<br/>
+|_ &nbsp;error: Closing Link: nyvxluxbk[10.0.2.15] (Quit: nyvxluxbk)<br/>
+8009/tcp &nbsp;open &nbsp;ajp13 &nbsp; &nbsp; &nbsp; Apache Jserv (Protocol v1.3)<br/>
+|_ajp-methods: Failed to get a valid response for the OPTION request<br/>
+8180/tcp &nbsp;open &nbsp;http &nbsp; &nbsp; &nbsp; &nbsp;Apache Tomcat/Coyote JSP engine 1.1<br/>
+|_http-favicon: Apache Tomcat<br/>
+|_http-server-header: Apache-Coyote/1.1<br/>
+|_http-title: Apache Tomcat/5.5<br/>
+8787/tcp &nbsp;open &nbsp;drb &nbsp; &nbsp; &nbsp; &nbsp; Ruby DRb RMI (Ruby 1.8; path /usr/lib/ruby/1.8/drb)<br/>
+34441/tcp open &nbsp;mountd &nbsp; &nbsp; &nbsp;1-3 (RPC #100005)<br/>
+41558/tcp open &nbsp;java-rmi &nbsp; &nbsp;GNU Classpath grmiregistry<br/>
+47694/tcp open &nbsp;nlockmgr &nbsp; &nbsp;1-4 (RPC #100021)<br/>
+58132/tcp open &nbsp;status &nbsp; &nbsp; &nbsp;1 (RPC #100024)<br/>
+MAC Address: 08:00:27:CE:E6:9F (Oracle VirtualBox virtual NIC)<br/>
+Device type: general purpose<br/>
+Running: Linux 2.6.X<br/>
+OS CPE: cpe:/o:linux:linux_kernel:2.6<br/>
+OS details: Linux 2.6.9 - 2.6.33<br/>
+Network Distance: 1 hop<br/>
+Service Info: Hosts: &nbsp;metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel<br/>
+<br/>
+Host script results:<br/>
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)<br/>
+|_nbstat: NetBIOS name: METASPLOITABLE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)<br/>
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)<br/>
+|_smb-security-mode: ERROR: Script execution failed (use -d to debug)<br/>
+|_smb2-time: Protocol negotiation failed (SMB2)<br/>
+<br/>
+TRACEROUTE<br/>
+HOP RTT &nbsp; &nbsp; ADDRESS<br/>
+1 &nbsp; 0.40 ms 10.0.2.5<br/>
+<br/>
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br/>
+Nmap done: 1 IP address (1 host up) scanned in 218.32 seconds<br/>
+</body></html>
