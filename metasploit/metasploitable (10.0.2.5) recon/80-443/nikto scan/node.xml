@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>nikto scan</string>
+  <key>nodeid</key><string>8ee7e5a7-1d6e-4bd9-9409-e81e641c1c61</string>
+  <key>modified_time</key><integer>1619930348</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1619930339</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>
